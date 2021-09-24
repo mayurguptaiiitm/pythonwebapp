@@ -1,0 +1,101 @@
+host:
+  arch: amd64
+  buildahVersion: 1.22.3
+  cgroupControllers: []
+  cgroupManager: systemd
+  cgroupVersion: v2
+  conmon:
+    package: conmon-2.0.29-2.fc34.x86_64
+    path: /usr/bin/conmon
+    version: 'conmon version 2.0.29, commit: '
+  cpus: 24
+  distribution:
+    distribution: fedora
+    version: "34"
+  eventLogger: journald
+  hostname: fedora
+  idMappings:
+    gidmap:
+    - container_id: 0
+      host_id: 1000
+      size: 1
+    - container_id: 1
+      host_id: 100000
+      size: 65536
+    uidmap:
+    - container_id: 0
+      host_id: 1000
+      size: 1
+    - container_id: 1
+      host_id: 100000
+      size: 65536
+  kernel: 5.13.14-200.fc34.x86_64
+  linkmode: dynamic
+  memFree: 18414563328
+  memTotal: 33499381760
+  ociRuntime:
+    name: crun
+    package: crun-1.0-1.fc34.x86_64
+    path: /usr/bin/crun
+    version: |-
+      crun version 1.0
+      commit: 139dc6971e2f1d931af520188763e984d6cdfbf8
+      spec: 1.0.0
+      +SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +YAJL
+  os: linux
+  remoteSocket:
+    path: /run/user/1000/podman/podman.sock
+  security:
+    apparmorEnabled: false
+    capabilities: CAP_CHOWN,CAP_DAC_OVERRIDE,CAP_FOWNER,CAP_FSETID,CAP_KILL,CAP_NET_BIND_SERVICE,CAP_SETFCAP,CAP_SETGID,CAP_SETPCAP,CAP_SETUID,CAP_SYS_CHROOT
+    rootless: true
+    seccompEnabled: true
+    seccompProfilePath: /usr/share/containers/seccomp.json
+    selinuxEnabled: true
+  serviceIsRemote: false
+  slirp4netns:
+    executable: /usr/bin/slirp4netns
+    package: slirp4netns-1.1.12-2.fc34.x86_64
+    version: |-
+      slirp4netns version 1.1.12
+      commit: 7a104a101aa3278a2152351a082a6df71f57c9a3
+      libslirp: 4.4.0
+      SLIRP_CONFIG_VERSION_MAX: 3
+      libseccomp: 2.5.0
+  swapFree: 8589930496
+  swapTotal: 8589930496
+  uptime: 4h 33m 40.22s (Approximately 0.17 days)
+registries:
+  search:
+  - registry.fedoraproject.org
+  - registry.access.redhat.com
+  - docker.io
+  - quay.io
+store:
+  configFile: /home/mayurgupta/.config/containers/storage.conf
+  containerStore:
+    number: 6
+    paused: 0
+    running: 1
+    stopped: 5
+  graphDriverName: overlay
+  graphOptions: {}
+  graphRoot: /home/mayurgupta/.local/share/containers/storage
+  graphStatus:
+    Backing Filesystem: btrfs
+    Native Overlay Diff: "true"
+    Supports d_type: "true"
+    Using metacopy: "false"
+  imageStore:
+    number: 26
+  runRoot: /run/user/1000/containers
+  volumePath: /home/mayurgupta/.local/share/containers/storage/volumes
+version:
+  APIVersion: 3.3.1
+  Built: 1630356396
+  BuiltTime: Mon Aug 30 15:46:36 2021
+  GitCommit: ""
+  GoVersion: go1.16.6
+  OsArch: linux/amd64
+  Version: 3.3.1
+
